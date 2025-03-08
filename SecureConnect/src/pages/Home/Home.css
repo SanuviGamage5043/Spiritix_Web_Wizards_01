@@ -1,0 +1,41 @@
+.homepagecontent{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.homeheader{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px;
+    padding: 20px;
+
+}
+
+.messagedetails{
+    font-size: 60px;
+    color: black;
+}
+
+.logoutbtn{
+    font-size: 30px;
+    height: 60px;
+    width: 150px;
+    padding: 10px;
+    border : 3px solid black;
+    background-color:rgb(97, 212, 244);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.homecontent{
+    justify-content: center;
+    font-size: 50px;
+    color: brown;
+    
+}
+.welcomemessage{
+    justify-self: center;
+}
