@@ -28,6 +28,7 @@
     background-color:rgb(97, 212, 244);
     color: black;
     font-weight: bold;
+    cursor: pointer;
 }
 .homecontent{
     justify-content: center;
