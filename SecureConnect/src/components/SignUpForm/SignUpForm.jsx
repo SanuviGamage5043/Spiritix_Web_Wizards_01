@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./SignUpForm.css";
 
 const SignUpForm = ({ users }) => {
@@ -37,7 +38,7 @@ const SignUpForm = ({ users }) => {
     setErrors({ ...errors, [name]: validate(name, value) });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = {
       username: validate("username", form.username),
@@ -45,15 +46,22 @@ const SignUpForm = ({ users }) => {
       confirmPassword: validate("confirmPassword", form.confirmPassword),
     };
     setErrors(newErrors);
+
     if (!Object.values(newErrors).some((err) => err)) {
-      setSubmitted(true);
+      try {
+        const response = await axios.post("http://localhost:5000/api/signup", {
+          username: form.username,
+          password: form.password,
+        });
+        setSubmitted(true);
+      } catch (error) {
+        console.error("Error signing up:", error);
+      }
     }
   };
 
   return (
     <form className="signup-form" onSubmit={handleSubmit}>
-     
-
       <div className="form-group">
         <label>Username</label>
         <input
@@ -61,6 +69,7 @@ const SignUpForm = ({ users }) => {
           name="username"
           value={form.username}
           onChange={handleChange}
+          className="inputsignup"
         />
         {errors.username && <span className="error">{errors.username}</span>}
       </div>
@@ -72,6 +81,7 @@ const SignUpForm = ({ users }) => {
           name="password"
           value={form.password}
           onChange={handleChange}
+          className="inputsignup"
         />
         {errors.password && <span className="error">{errors.password}</span>}
       </div>
@@ -83,10 +93,9 @@ const SignUpForm = ({ users }) => {
           name="confirmPassword"
           value={form.confirmPassword}
           onChange={handleChange}
+          className="inputsignup"
         />
-        {errors.confirmPassword && (
-          <span className="error">{errors.confirmPassword}</span>
-        )}
+        {errors.confirmPassword && <span className="error">{errors.confirmPassword}</span>}
       </div>
 
       <button type="submit" disabled={Object.values(errors).some((err) => err)}>
