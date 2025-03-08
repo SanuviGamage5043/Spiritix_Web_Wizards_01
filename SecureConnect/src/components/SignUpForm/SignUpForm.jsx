@@ -3,9 +3,38 @@ import './SignUpForm.css';
 
 function SignUpForm() {
   return (
-    <div>
-      <h1 className='signupdetails'>signup details</h1>
-    </div>
+    <form className='fullform'>
+      <div>
+        <label className='labeldetails'>
+            Username
+        </label>
+        <input 
+            id='username'
+            type='text'
+            className='inputdetails'
+            />
+      </div>
+      <div>
+        <label className='labeldetails'>
+            Password
+        </label>
+        <input 
+            id='password'
+            type='text'
+            className='inputdetails'
+            />
+      </div>
+      <div>
+        <label className='labeldetails'>
+            Confrim Password
+        </label>
+        <input 
+            id='confrimpassowrd'
+            type='text'
+            className='inputdetails'
+            />
+      </div>
+    </form>
   )
 }
 
