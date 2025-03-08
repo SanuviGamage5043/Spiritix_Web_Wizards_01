@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/LoginPage.css"; // Import the CSS file
-import Background from "../assets/image/login.jpeg"; // Ensure correct path
+import "../styles/LoginPage.css"; 
+import Background from "../assets/image/login.jpeg"; 
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -9,7 +9,7 @@ const LoginPage = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  // Hardcoded user credentials (for demo purposes)
+  
   const mockUser = {
     username: "admin",
     password: "123",
@@ -25,7 +25,7 @@ const LoginPage = () => {
 
     if (username === mockUser.username && password === mockUser.password) {
       setError("");
-      navigate("/dashboard"); // Redirect to the dashboard after login
+      navigate("/dashboard"); 
     } else {
       setError("Invalid username or password.");
     }
@@ -59,6 +59,8 @@ const LoginPage = () => {
           />
 
         <button type="submit" className="login-btn">Log In</button>
+        <h3 className="signup">Sign Up</h3>
+        
       </form>
       </div>
     </div>

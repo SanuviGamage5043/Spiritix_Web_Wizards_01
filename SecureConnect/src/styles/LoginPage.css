@@ -68,12 +68,12 @@ input {
   
   input[type="text"],
   input[type="password"] {
-    transition: all 0.3s ease; /* Smooth transition for focus effect */
+    transition: all 0.3s ease; 
   }
   
   input[type="text"]:focus,
   input[type="password"]:focus {
-    box-shadow: 0 0 8px rgba(0, 255, 255, 0.7); /* Glowing effect when focused */
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.7); 
   }
   
  
@@ -111,6 +111,14 @@ input {
     color: #f1f1f1;
   }
  
+.signup{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.4); 
+    cursor: pointer;
+
+
+}
 
   
  
@@ -125,4 +133,4 @@ input {
     }
   }
   
-  
+   
