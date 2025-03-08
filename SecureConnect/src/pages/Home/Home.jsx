@@ -3,18 +3,16 @@ import './Home.css';
 
 function Home() {
   return (
-    <main className='homepagecontent'>
-        <div className='homeheader'>
+    <div>
+      <div className='homeheader'>
         <h1 className='messagedetails'>Hello</h1>
         <button className='logoutbtn'>Logout</button>
-        </div>
-        <div>
-            <h2 classname='headingwelcome'>
-                Welcome to SecureConnect
-            </h2>
-        </div>
-        
-    </main>
+      </div>
+
+      <div className='homecontent'>
+        <h1 className='welcomemessage'>Welcome to SecureConnect</h1>
+      </div>
+    </div>
    
     
   );
