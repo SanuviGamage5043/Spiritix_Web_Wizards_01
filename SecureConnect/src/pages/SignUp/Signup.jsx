@@ -1,14 +1,16 @@
-import React from 'react';
-import './Signup.css';
-import SignupForm from '../../components/SignupForm/SignupForm';
+import React from "react";
+import SignUpForm from "../../components/SignUpForm/SignUpForm";
+import "./SignUp.css";
 
-function Signup() {
+const SignUp = () => {
+  const users = ["existingUser", "testUser"]; // Example usernames
+
   return (
-    <div className='signuppagecontent'>
-      <h1 className='headingsignup'>Creata an account</h1>
-      <SignupForm />
+    <div className="signup-container">
+      <h1 className="signup-heading">Create a new account</h1>
+      <SignUpForm users={users} />
     </div>
-  )
-}
+  );
+};
 
-export default Signup;
+export default SignUp;

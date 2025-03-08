@@ -1,4 +1,58 @@
-.logindetails {
-    font-size: 60;
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    height: fit-content;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-self: center;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+  }
+  
+  .error {
     color: red;
-}
+    font-size: 12px;
+  }
+  
+  .success {
+    color: green;
+    font-size: 14px;
+  }
+  
+  
+  .inputname{
+    justify-self: left;
+    color: black;
+  }
+
+  .labelname{
+    color: black;
+    font-size: 25px;
+    justify-self: left;
+  }

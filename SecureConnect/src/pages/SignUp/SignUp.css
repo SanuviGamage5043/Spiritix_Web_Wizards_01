@@ -1,15 +1,16 @@
-.signuppagecontent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;   
-  width: 100%;
-  height: 100vh; 
-  padding: 50px;
- 
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f4f8;
+  padding: 20px;
 }
 
-.headingsignup{
-    font-size: 60px;
-    color: black;
+.signup-heading {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 30px;
 }
+
