@@ -23,7 +23,7 @@ if (!process.env.JWT_SECRET) {
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "S@20842abc",
+  password: "",
   database: "secureconnect",
 });
 
